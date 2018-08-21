@@ -60,14 +60,25 @@ public class Main {
     }
 
     public static int calculateHighScorePosition(int score) {
+//        if (score >= 1000) {
+//            return 1;
+//        } else if (score >= 500) {
+//            return 2;
+//        } else if (score >= 100) {
+//            return 3;
+//        }
+//            return 4;
+
+        int position = 4;
         if (score >= 1000) {
-            return 1;
+            position = 1;
         } else if (score >= 500) {
-            return 2;
+            position = 2;
         } else if (score >= 100) {
-            return 3;
-        } else
-            return 4;
+            position = 3;
+        }
+
+        return position;
     }
 
     public static int calculateScore(boolean gameOver, int score, int levelCompleted, int bonus) {
@@ -79,6 +90,7 @@ public class Main {
             return finalScore;
         } else {
             return -1;
+
         }
     }
 }
